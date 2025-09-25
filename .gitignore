@@ -1,0 +1,110 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv/
+.ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+*.out
+*.err
+
+# Models
+models/*.pt
+models/*.onnx
+models/*.trt
+!models/README.md
+
+# Recordings
+recordings/
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Configuration
+config/local.yaml
+config/*.local.yaml
+config/secrets.yaml
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# System
+.env
+.env.local
+.env.*.local
+*.pid
+*.seed
+*.pid.lock
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+
+# SSL certificates
+*.pem
+*.key
+*.crt
+*.csr
+
+# Cloud credentials
+aws-credentials.json
+azure-credentials.json
+gcp-credentials.json
+*.serviceaccount.json

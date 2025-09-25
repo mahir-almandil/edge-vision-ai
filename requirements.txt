@@ -1,0 +1,33 @@
+# Core dependencies
+opencv-python==4.8.1.78
+ultralytics==8.0.200
+flask==3.0.0
+numpy==1.24.3
+pyyaml==6.0.1
+
+# Deep learning frameworks
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Video processing
+Pillow==10.0.1
+
+# API and web
+flask-cors==4.0.0
+requests==2.31.0
+websocket-client==1.6.3
+
+# Cloud connectors (optional)
+paho-mqtt==1.6.1
+boto3==1.28.57  # AWS IoT
+azure-iot-device==2.12.0  # Azure IoT Hub
+
+# Monitoring and logging
+psutil==5.9.5
+python-dateutil==2.8.2
+
+# Development dependencies (optional)
+pytest==7.4.2
+black==23.9.1
+flake8==6.1.0
+pre-commit==3.4.0

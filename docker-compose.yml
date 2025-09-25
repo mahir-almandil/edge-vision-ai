@@ -1,0 +1,83 @@
+version: '3.8'
+
+services:
+  edge-vision-ai:
+    build:
+      context: .
+      target: production
+    container_name: edge-vision-ai
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./config:/app/config
+      - ./logs:/app/logs
+      - ./recordings:/app/recordings
+      - ./models:/app/models
+    devices:
+      - /dev/video0:/dev/video0  # USB camera
+      # - /dev/video1:/dev/video1  # Additional cameras
+    environment:
+      - CAMERA_SOURCE=0
+      - MODEL_TYPE=yolov8n
+      - CONFIDENCE=0.45
+      - DEVICE=cpu  # Change to 'cuda' for GPU
+    restart: unless-stopped
+    networks:
+      - vision-network
+
+  # Optional: GPU-enabled service
+  edge-vision-ai-gpu:
+    build:
+      context: .
+      target: gpu
+    container_name: edge-vision-ai-gpu
+    runtime: nvidia  # Requires nvidia-docker2
+    ports:
+      - "8081:8080"
+    volumes:
+      - ./config:/app/config
+      - ./logs:/app/logs
+      - ./recordings:/app/recordings
+      - ./models:/app/models
+    devices:
+      - /dev/video0:/dev/video0
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,video,utility
+      - CAMERA_SOURCE=0
+      - MODEL_TYPE=yolov8n
+      - CONFIDENCE=0.45
+      - DEVICE=cuda
+    restart: unless-stopped
+    networks:
+      - vision-network
+    profiles:
+      - gpu
+
+  # Optional: Development service
+  edge-vision-dev:
+    build:
+      context: .
+      target: development
+    container_name: edge-vision-dev
+    ports:
+      - "8082:8080"
+      - "8888:8888"  # Jupyter
+    volumes:
+      - .:/app  # Mount entire directory for development
+      - /app/__pycache__
+      - /app/.pytest_cache
+    devices:
+      - /dev/video0:/dev/video0
+    environment:
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
+    restart: unless-stopped
+    networks:
+      - vision-network
+    profiles:
+      - dev
+
+networks:
+  vision-network:
+    driver: bridge
