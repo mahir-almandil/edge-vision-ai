@@ -18,12 +18,6 @@ A production-ready, open-source edge AI platform for real-time computer vision o
 - **Extensible Architecture** - Plugin system for custom detections
 - **Web Dashboard** - Real-time monitoring from any browser
 
-## Screenshots
-
-<div align="center">
-  <img src="docs/images/dashboard.png" alt="Dashboard" width="600"/>
-  <p><i>Real-time monitoring dashboard with object detection</i></p>
-</div>
 
 ## Quick Start
 
