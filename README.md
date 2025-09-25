@@ -7,7 +7,7 @@
 
 A production-ready, open-source edge AI platform for real-time computer vision on industrial IoT devices. Deploy intelligent vision systems on NVIDIA Jetson, Raspberry Pi, or any edge device with live video analytics, natural language interface, and cloud connectivity.
 
-## 🎯 Features
+## Features
 
 - **Real-time Object Detection** - YOLOv8 powered detection with 80+ object classes
 - **Natural Language Interface** - Chat with your camera using simple commands
@@ -18,14 +18,14 @@ A production-ready, open-source edge AI platform for real-time computer vision o
 - **Extensible Architecture** - Plugin system for custom detections
 - **Web Dashboard** - Real-time monitoring from any browser
 
-## 📸 Screenshots
+## Screenshots
 
 <div align="center">
   <img src="docs/images/dashboard.png" alt="Dashboard" width="600"/>
   <p><i>Real-time monitoring dashboard with object detection</i></p>
 </div>
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -53,7 +53,7 @@ python src/main.py
 
 Access the dashboard at `http://localhost:8080`
 
-## 🐳 Docker Deployment
+## Docker Deployment
 
 ```bash
 # Build the Docker image
@@ -66,7 +66,7 @@ docker run --gpus all -p 8080:8080 --device=/dev/video0 edge-vision-ai
 docker run -p 8080:8080 --device=/dev/video0 edge-vision-ai
 ```
 
-## 🏭 Industrial Use Cases
+## Industrial Use Cases
 
 ### Manufacturing
 - Quality control inspection
@@ -92,7 +92,7 @@ docker run -p 8080:8080 --device=/dev/video0 edge-vision-ai
 - Shelf monitoring
 - Heat mapping
 
-## 📚 Documentation
+## Documentation
 
 - [Installation Guide](docs/INSTALLATION.md)
 - [Configuration](docs/CONFIGURATION.md)
@@ -101,7 +101,7 @@ docker run -p 8080:8080 --device=/dev/video0 edge-vision-ai
 - [Deployment Guide](docs/DEPLOYMENT.md)
 - [Troubleshooting](docs/TROUBLESHOOTING.md)
 
-## 🔧 Configuration
+## Configuration
 
 Create a `config.yaml` file:
 
@@ -139,7 +139,7 @@ cloud:
   topic: ""
 ```
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 edge-vision-ai/
@@ -156,7 +156,7 @@ edge-vision-ai/
 └── docs/               # Documentation
 ```
 
-## 🔌 Plugin System
+## Plugin System
 
 Create custom detection plugins:
 
@@ -178,7 +178,7 @@ class CustomDetector(BasePlugin):
         pass
 ```
 
-## 📊 Performance
+## Performance
 
 | Platform | Model | FPS | RAM Usage | Power |
 |----------|-------|-----|-----------|-------|
@@ -188,7 +188,7 @@ class CustomDetector(BasePlugin):
 | RPi 4 (8GB) | YOLOv8n | 3-5 | 1.8GB | 7W |
 | Desktop GPU | YOLOv8n | 120+ | 2.5GB | 75W |
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
@@ -208,7 +208,7 @@ flake8 src/
 black src/
 ```
 
-## 📝 Examples
+## Examples
 
 ### Basic Object Detection
 
@@ -253,7 +253,7 @@ system = MultiCameraSystem(cameras)
 system.start()
 ```
 
-## 🌟 Showcase
+## Showcase
 
 Organizations using Edge Vision AI:
 
@@ -264,25 +264,25 @@ Organizations using Edge Vision AI:
 
 *Add your implementation to our [showcase](docs/SHOWCASE.md)!*
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics) for object detection
 - [NVIDIA Jetson](https://developer.nvidia.com/embedded-computing) for edge AI platform
 - [OpenCV](https://opencv.org/) for computer vision
 - [Flask](https://flask.palletsprojects.com/) for web framework
 
-## 📞 Support
+## Support
 
-- 📖 [Documentation](docs/)
-- 💬 [Discussions](https://github.com/yourusername/edge-vision-ai/discussions)
-- 🐛 [Issue Tracker](https://github.com/yourusername/edge-vision-ai/issues)
-- 📧 Email: support@edgevisionai.com
+- [Documentation](docs/)
+- [Discussions](https://github.com/yourusername/edge-vision-ai/discussions)
+- [Issue Tracker](https://github.com/yourusername/edge-vision-ai/issues)
+- Email: support@edgevisionai.com
 
-## 🗺️ Roadmap
+## Roadmap
 
 - [ ] TensorRT optimization
 - [ ] DeepStream integration
@@ -296,7 +296,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <div align="center">
-  <b>Built with ❤️ for the Edge AI Community</b>
+  <b>Built with for the Edge AI Community</b>
   <br>
-  <a href="https://github.com/yourusername/edge-vision-ai">⭐ Star us on GitHub</a>
+  <a href="https://github.com/yourusername/edge-vision-ai">Star us on GitHub</a>
 </div>
